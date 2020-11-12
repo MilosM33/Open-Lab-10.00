@@ -11,13 +11,17 @@ namespace Open_Lab_10._00
         static void Main(string[] args)
         {
             Book LOTR = new Book();
-            LOTR.SetAuthor("Jano");
-            LOTR.SetNumberOfPages(256);
-            LOTR.SetCategory("Action");
-            LOTR.SetTitle("Elektrika");
-            LOTR.SetCategory("Učebnica");
-            LOTR.GetInfo();
-            
+            LOTR.Author = "Jano";
+            LOTR.Pages = 256;
+            LOTR.Category = "Ucebnica";
+            LOTR.Title = "Elektrika";
+            LOTR.ReleaseDate = 2020;
+
+            Console.WriteLine(LOTR.Title);
+            Console.WriteLine(LOTR.Author);
+            Console.WriteLine(LOTR.Pages);
+            Console.WriteLine(LOTR.Category);
+            Console.WriteLine(LOTR.ReleaseDate);
         }
     }
     class Book
@@ -27,7 +31,32 @@ namespace Open_Lab_10._00
         private string category;
         private string author;
         private int releaseDate;
-
+        public string Title
+        {
+            get => title;
+            set => title = value;
+        }
+        public int Pages
+        {
+            get => pages;
+            set => pages = (value < 0 ? -1 : value);
+        }
+        public string Category
+        {
+            get => category;
+            set => category = value;
+        }
+        
+        public string Author
+        {
+            get => author;
+            set => author = value;
+        }
+        public int ReleaseDate
+        {
+            get => releaseDate;
+            set => releaseDate = (value < 1450 || value > 2021 ? -1 : value);
+        }
         public void SetTitle(string title) => this.title = title;
 
         public void SetNumberOfPages(int pages) => this.pages = pages;
