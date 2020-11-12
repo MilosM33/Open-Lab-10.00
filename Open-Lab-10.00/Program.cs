@@ -10,7 +10,14 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-	        Console.WriteLine();
+            Book LOTR = new Book();
+            LOTR.title = "Elektrika";
+            Console.WriteLine(LOTR.title);
         }
+    }
+    class Book
+    {
+        public string title;
+        private int pages;
     }
 }
