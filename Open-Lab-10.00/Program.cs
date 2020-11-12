@@ -16,6 +16,7 @@ namespace Open_Lab_10._00
             LOTR.SetCategory("Action");
             LOTR.SetTitle("Elektrika");
             LOTR.SetCategory("Učebnica");
+            LOTR.SetReleaseDate(2020);
             LOTR.GetInfo();
             
         }
