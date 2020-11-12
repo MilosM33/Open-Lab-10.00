@@ -10,23 +10,42 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Book LOTR = new Book();
-            LOTR.Author = "Jano";
-            LOTR.Pages = 256;
-            LOTR.Category = "Ucebnica";
-            LOTR.Title = "Elektrika";
-            LOTR.ReleaseDate = 2020;
-
-            Console.WriteLine(LOTR.Title);
-            Console.WriteLine(LOTR.Author);
-            Console.WriteLine(LOTR.Pages);
-            Console.WriteLine(LOTR.Category);
-            Console.WriteLine(LOTR.ReleaseDate);
+            Book LOTR2 = new Book();
+            Book LOTR3 = new Book("Elektrika", 256);
+            Book HOBIT = new Book("Matematika" , 256,"Ján","Učebnica",2020);
+            LOTR2.GetInfo();
+            LOTR3.GetInfo();
+            HOBIT.GetInfo();
 
         }
     }
     class Book
     {
+
+        public Book()
+        {
+            this.title = "-1";
+            this.author = "-1";
+            this.pages = -1;
+            this.category = "-1";
+            this.releaseDate = -1;
+        }
+        public Book(string title, int pages)
+        {
+            this.title = title;
+            this.author = "-1";
+            this.pages = pages;
+            this.category = "-1";
+            this.releaseDate = -1;
+        }
+        public Book(string title, int pages, string author, string category,int releaseDate)
+        {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.category = category;
+            this.releaseDate = releaseDate;
+        }
         private string title;
         private int pages;
         private string category;
