@@ -22,6 +22,7 @@ namespace Open_Lab_10._00
             Console.WriteLine(LOTR.Pages);
             Console.WriteLine(LOTR.Category);
             Console.WriteLine(LOTR.ReleaseDate);
+
         }
     }
     class Book
